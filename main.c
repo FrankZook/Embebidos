@@ -5,7 +5,7 @@
 
 int contador_b=1;
 int contador_c=128;
-int cintador_d=1;
+int contador_d=1;
 int flagopcion1=0, flagopcion2=0, flagopcion3=0;
 int puertoA;
 
@@ -17,13 +17,22 @@ void main (void){
 while(1){
    puertoA=input_a();
    
-   if(contador_b==128){
-   contador_b==1;
+   if(contador_b==256){
+   contador_b=1;
    }
    if((puertoA&0x01)==0x01){
    flagopcion1=1;
    output_b(contador_b);
    contador_b*=2;
+   delay_ms(300);
+   }
+   if(contador_c==1){
+   contador_c=256;
+   }
+   if((puertoA&0x02)==0x02){
+   flagopcion2=1;
+   output_c(contador_c);
+   contador_c/=2;
    delay_ms(300);
    }
 }  
